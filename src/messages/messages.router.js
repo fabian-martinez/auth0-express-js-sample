@@ -19,6 +19,7 @@ const messagesRouter = express.Router();
 // GET messages/
 
 messagesRouter.get("/public-message", (req, res) => {
+  console.log(req);
   const message = getPublicMessage();
   res.status(200).send(message);
 });
